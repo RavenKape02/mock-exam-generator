@@ -1,0 +1,350 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@fontsource-variable/geist/wght.css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* ------------------------------------------------------------------ */
+/*  Colour tokens: "Pisara" (classroom chalkboard green + chalk yellow). */
+/* ------------------------------------------------------------------ */
+
+:root {
+	color-scheme: light;
+	--radius: 0.875rem;
+
+	--background: #e8edea;
+	--foreground: #18171d;
+	--card: #ffffff;
+	--card-foreground: #18171d;
+	--popover: #ffffff;
+	--popover-foreground: #18171d;
+	--primary: #18171d;
+	--primary-foreground: #ffffff;
+	--secondary: #eef2ef;
+	--secondary-foreground: #18171d;
+	--muted: #f4f7f5;
+	--muted-foreground: #5c6862;
+	--accent: #e1f3e9;
+	--accent-foreground: #14603f;
+	--destructive: #b42318;
+	--border: #e3e8e5;
+	--input: #d6ded9;
+	--ring: #1f8a5b;
+
+	/* Brand */
+	--brand: #1f8a5b;
+	--brand-strong: #14603f;
+	--brand-soft: #e1f3e9;
+	--brand-glow: #bfe6cf;
+
+	/* States */
+	--success: #1e7a48;
+	--success-soft: #e7f8ee;
+	--warning: #a15c07;
+	--warning-soft: #fdf1dc;
+	--danger: #b42318;
+	--danger-soft: #fdecec;
+
+	/* Subjects: one colour each, used for dots, bars and chart lines */
+	--subject-math: #1f8a5b;
+	--subject-science: #b7791f;
+	--subject-reading: #3d74d9;
+	--subject-language: #c8519f;
+
+	--chart-1: var(--subject-math);
+	--chart-2: var(--subject-science);
+	--chart-3: var(--subject-reading);
+	--chart-4: var(--subject-language);
+	--chart-5: #d08a1d;
+
+	/* Chalkboard-green icon rail; chalk-yellow marks the current page */
+	--sidebar: #16352b;
+	--sidebar-foreground: #9fb8ab;
+	--sidebar-primary: #f2d06b;
+	--sidebar-primary-foreground: #16352b;
+	--sidebar-accent: #21473a;
+	--sidebar-accent-foreground: #ffffff;
+	--sidebar-border: #21473a;
+	--sidebar-ring: #f2d06b;
+
+	--shadow-card: 0 1px 2px rgb(24 23 29 / 0.04), 0 10px 30px -14px rgb(24 23 29 / 0.16);
+	--shadow-lift: 0 2px 4px rgb(24 23 29 / 0.05), 0 24px 40px -18px rgb(24 23 29 / 0.3);
+	--hero-gradient: linear-gradient(115deg, #e6f4ec 0%, #cfeadb 55%, #f3ecc9 100%);
+}
+
+.dark {
+	color-scheme: dark;
+
+	--background: #101714;
+	--foreground: #edf2ef;
+	--card: #17201c;
+	--card-foreground: #edf2ef;
+	--popover: #1d2722;
+	--popover-foreground: #edf2ef;
+	--primary: #edf2ef;
+	--primary-foreground: #13201a;
+	--secondary: #232e29;
+	--secondary-foreground: #edf2ef;
+	--muted: #1d2722;
+	--muted-foreground: #a3b2aa;
+	--accent: #1b3328;
+	--accent-foreground: #b9e8cf;
+	--destructive: #f2867a;
+	--border: #29342f;
+	--input: #36433d;
+	--ring: #4cc28a;
+
+	--brand: #4cc28a;
+	--brand-strong: #8bddb4;
+	--brand-soft: #1b3328;
+	--brand-glow: #24503c;
+
+	--success: #6fd3a0;
+	--success-soft: #183528;
+	--warning: #f0b860;
+	--warning-soft: #3a2c14;
+	--danger: #f2867a;
+	--danger-soft: #3d1d1b;
+
+	--subject-math: #4cc28a;
+	--subject-science: #e2a84b;
+	--subject-reading: #7fa2f0;
+	--subject-language: #e384c2;
+	--chart-5: #f0b860;
+
+	--sidebar: #0b120f;
+	--sidebar-foreground: #8fa69a;
+	--sidebar-primary: #f2d06b;
+	--sidebar-primary-foreground: #13201a;
+	--sidebar-accent: #1a2a23;
+	--sidebar-accent-foreground: #ffffff;
+	--sidebar-border: #1a2a23;
+	--sidebar-ring: #f2d06b;
+
+	--shadow-card: 0 1px 2px rgb(0 0 0 / 0.3), 0 12px 30px -16px rgb(0 0 0 / 0.7);
+	--shadow-lift: 0 2px 4px rgb(0 0 0 / 0.3), 0 24px 40px -18px rgb(0 0 0 / 0.8);
+	--hero-gradient: linear-gradient(115deg, #173326 0%, #1c3d2e 55%, #39331a 100%);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Tailwind theme: colours, radius, fonts, motion                     */
+/* ------------------------------------------------------------------ */
+
+@theme inline {
+	--font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+
+	--radius-sm: calc(var(--radius) * 0.6);
+	--radius-md: calc(var(--radius) * 0.8);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) * 1.4);
+	--radius-2xl: calc(var(--radius) * 1.8);
+	--radius-3xl: calc(var(--radius) * 2.2);
+	--radius-card: 1.375rem;
+
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+
+	--color-brand: var(--brand);
+	--color-brand-strong: var(--brand-strong);
+	--color-brand-soft: var(--brand-soft);
+	--color-brand-glow: var(--brand-glow);
+	--color-success: var(--success);
+	--color-success-soft: var(--success-soft);
+	--color-warning: var(--warning);
+	--color-warning-soft: var(--warning-soft);
+	--color-danger: var(--danger);
+	--color-danger-soft: var(--danger-soft);
+	--color-subject-math: var(--subject-math);
+	--color-subject-science: var(--subject-science);
+	--color-subject-reading: var(--subject-reading);
+	--color-subject-language: var(--subject-language);
+
+	--shadow-card: var(--shadow-card);
+	--shadow-lift: var(--shadow-lift);
+}
+
+@theme {
+	/* Motion: small changes fast, bigger movement a bit longer (docs/PROTOTYPE_PLAN.md) */
+	--ease-standard: cubic-bezier(0.2, 0, 0, 1);
+	--ease-enter: cubic-bezier(0, 0, 0, 1);
+	--ease-exit: cubic-bezier(0.3, 0, 1, 1);
+	--ease-spring: cubic-bezier(0.34, 1.45, 0.64, 1);
+
+	--animate-reveal: reveal 360ms var(--ease-enter) backwards;
+	--animate-fill: fill 100ms var(--ease-enter);
+	--animate-slide-next: slide-next 160ms var(--ease-enter);
+	--animate-slide-prev: slide-prev 160ms var(--ease-enter);
+	--animate-grow-y: grow-y 380ms var(--ease-enter) backwards;
+	--animate-grow-x: grow-x 380ms var(--ease-enter) backwards;
+	--animate-count: count 600ms var(--ease-enter) backwards;
+
+	@keyframes reveal {
+		from {
+			opacity: 0;
+			filter: blur(6px);
+			transform: translateY(8px);
+		}
+	}
+	@keyframes fill {
+		from {
+			transform: scale(0.4);
+			opacity: 0;
+		}
+	}
+	@keyframes slide-next {
+		from {
+			opacity: 0;
+			transform: translateX(12px);
+		}
+	}
+	@keyframes slide-prev {
+		from {
+			opacity: 0;
+			transform: translateX(-12px);
+		}
+	}
+	@keyframes grow-y {
+		from {
+			transform: scaleY(0);
+		}
+	}
+	@keyframes grow-x {
+		from {
+			transform: scaleX(0);
+		}
+	}
+	@keyframes count {
+		from {
+			--num: 0;
+		}
+	}
+}
+
+/* Count-up numbers without JavaScript: set style="--num: 182" on a .count element. */
+@property --num {
+	syntax: '<integer>';
+	inherits: false;
+	initial-value: 0;
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+
+	html {
+		-webkit-text-size-adjust: 100%;
+		text-rendering: optimizeLegibility;
+	}
+
+	body {
+		@apply bg-background font-sans text-foreground antialiased;
+	}
+
+	::selection {
+		background: var(--brand-glow);
+		color: var(--foreground);
+	}
+
+	input,
+	textarea {
+		caret-color: var(--brand);
+	}
+
+	/* Thin, palette-tinted scrollbars */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--input) transparent;
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--ring);
+		outline-offset: 2px;
+	}
+
+	a {
+		text-underline-offset: 0.2em;
+	}
+
+	/* Native modal dialogs lock page scroll while open (no JavaScript). */
+	html:has(dialog[open]:modal) {
+		overflow: hidden;
+	}
+}
+
+@layer components {
+	.card-surface {
+		@apply rounded-[var(--radius-card)] bg-card text-card-foreground shadow-card;
+	}
+
+	/* Staggered entrance: give children style="--i: n" (only the first ~6 stagger). */
+	.reveal {
+		animation: var(--animate-reveal);
+		animation-delay: calc(min(var(--i, 0), 6) * 40ms);
+	}
+
+	.count {
+		counter-reset: num var(--num);
+		animation: var(--animate-count);
+		font-variant-numeric: tabular-nums;
+	}
+	.count::after {
+		content: counter(num);
+	}
+}
+
+@utility tabular {
+	font-variant-numeric: tabular-nums;
+}
+
+/* Page change: a quick cross-fade through the View Transitions API */
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 220ms;
+	animation-timing-function: var(--ease-standard);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-delay: 0ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none !important;
+	}
+}
