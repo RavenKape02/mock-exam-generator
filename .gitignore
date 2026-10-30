@@ -1,0 +1,23 @@
+# API keys
+.env
+.env.*
+!.env.example
+
+# Node / SvelteKit
+node_modules/
+.svelte-kit/
+build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Claude Code: personal settings and downloaded binaries
+.claude/settings.local.json
+.claude/skills/impeccable/scripts/bin/
+
+# Impeccable working files (review captures, scratch briefs)
+.impeccable/review/
+.impeccable/tmp/
+.playwright-mcp/
