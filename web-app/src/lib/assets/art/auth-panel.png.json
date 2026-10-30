@@ -1,0 +1,6 @@
+{
+	"model": "gpt-image-2.5-sunburst",
+	"size": "1024x1536",
+	"background": "opaque",
+	"prompt": "Tall portrait still life for a log-in screen side panel, seen from a slightly high front angle. Resting on a soft mint surface in the lower half: a single answer sheet card with exactly five neat rows of four round bubbles, perfectly aligned in a grid, with exactly one bubble filled solid green in each row; nothing else printed on the sheet, one yellow pencil lying diagonally across its lower corner, and two closed green books stacked beside it. Behind them, a flower with exactly eight identical rounded petals evenly spaced around a smooth pearl-white centre, large, in green. The upper third is empty smooth background for a caption. Background: smooth vertical gradient from pale mint at the top to very pale chalk yellow at the bottom. Soft matte 3D clay render, rounded simple forms, smooth surfaces, soft studio light from the upper left, one soft contact shadow. Palette only: chalkboard green #1F8A5B, deep board green #16352B, mint #E1F3E9, chalk yellow #F2D06B, warm white, a little graphite #1D1F24. No purple, violet or lavender. Clean and uncluttered, generous empty space. No text, letters, numbers or symbols on anything. No logos. No people."
+}
