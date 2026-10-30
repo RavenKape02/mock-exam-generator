@@ -1,6 +1,4 @@
 # API keys
-.env
-.env.*
 !.env.example
 
 # Node / SvelteKit
@@ -21,3 +19,4 @@ __pycache__/
 .impeccable/review/
 .impeccable/tmp/
 .playwright-mcp/
+config.bat
