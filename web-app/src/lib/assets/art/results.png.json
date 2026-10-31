@@ -1,0 +1,6 @@
+{
+	"model": "gpt-image-2.5-sunburst",
+	"size": "1024x1024",
+	"background": "transparent",
+	"prompt": "Small centred spot illustration on a transparent background for an exam results screen: a single answer sheet card with exactly five neat rows of four round bubbles, perfectly aligned in a grid, with exactly one bubble filled solid green in each row; nothing else printed on the sheet, standing slightly tilted, with a flower with exactly eight identical rounded petals evenly spaced around a smooth pearl-white centre in green resting on its top corner and one yellow pencil leaning against it. Quietly proud mood, simple, lots of empty space. Soft matte 3D clay render, rounded simple forms, smooth surfaces, soft studio light from the upper left, one soft contact shadow. Palette only: chalkboard green #1F8A5B, deep board green #16352B, mint #E1F3E9, chalk yellow #F2D06B, warm white, a little graphite #1D1F24. No purple, violet or lavender. Clean and uncluttered, generous empty space. No text, letters, numbers or symbols on anything. No logos. No people."
+}
